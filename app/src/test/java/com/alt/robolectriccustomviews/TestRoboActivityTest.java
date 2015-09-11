@@ -17,8 +17,7 @@ import org.robolectric.annotation.Config;
 // WARNING: In case of any problem with configuring path to Manifest (Mac users) see - https://github.com/robolectric/robolectric/wiki/Running-tests-in-Android-Studio
 @Config(
         sdk = 21,
-        manifest = "src/main/AndroidManifest.xml",
-        constants = BuildConfig.class
+        manifest = "src/main/AndroidManifest.xml"
 )
 @RunWith(RobolectricTestRunner.class)
 public class TestRoboActivityTest {
