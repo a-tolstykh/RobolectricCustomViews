@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
@@ -17,9 +18,10 @@ import org.robolectric.annotation.Config;
 // WARNING: In case of any problem with configuring path to Manifest (Mac users) see - https://github.com/robolectric/robolectric/wiki/Running-tests-in-Android-Studio
 @Config(
         sdk = 21,
-        manifest = "src/main/AndroidManifest.xml"
+        manifest = "src/main/AndroidManifest.xml",
+        constants = BuildConfig.class
 )
-@RunWith(RobolectricTestRunner.class)
+@RunWith(RobolectricGradleTestRunner.class)
 public class TestRoboActivityTest {
     private TestRoboActivity mActivity;
 
